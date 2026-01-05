@@ -1,0 +1,11 @@
+import sys
+input = sys.stdin.readline
+T = int(input())
+for _ in range(T):
+	X, Y, N = map(int, input().split())
+	minNUm = 0
+	minNum = abs(X) + abs(Y)
+	if minNum <= N and (N - minNum) % 2 == 0:
+		print('YES')
+	else:
+		print('NO')
