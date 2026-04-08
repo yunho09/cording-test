@@ -1,25 +1,9 @@
 import sys
 n = int(sys.stdin.readline())
+total = 1000 - n
 count = 0
-money = 1000
-money = money - n
-while money > 0:
-    if money >= 500:
-        money -= 500
-        count += 1
-    elif money >= 100:
-        money -= 100
-        count += 1
-    elif money >= 50:
-        money -= 50
-        count += 1
-    elif money >= 10:
-        money -= 10
-        count += 1
-    elif money >= 5:
-        money -= 5
-        count += 1
-    elif money >= 1:
-        money -= 1
-        count += 1
+list = [500, 100, 50, 10, 5, 1]
+for i in list:
+    count += total // i
+    total %= i
 print(count)
